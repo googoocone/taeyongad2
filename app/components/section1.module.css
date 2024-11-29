@@ -1,0 +1,193 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftContainer {
+  width: 550px;
+  height: 100%;
+  margin-right: 50px;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.logo {
+  height: 60px;
+}
+
+.description {
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 62px;
+  font-weight: bolder;
+}
+
+.titleTop {
+  color: #172958;
+  font-weight: 900;
+}
+
+.buttonContainer {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+}
+
+.chatButton {
+  width: 130px;
+  height: 40px;
+  background-color: #ffc93c;
+  border-radius: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+}
+
+.chatButton:hover {
+  transition: 0.5s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 19px;
+}
+
+.kakaoImg {
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+}
+
+.telButton {
+  width: 130px;
+  height: 40px;
+  background-color: #fafafa;
+  border-radius: 50px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+}
+.telButton:hover {
+  transition: 0.5s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  font-size: 19px;
+}
+
+.telImg {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.tagContainer {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.tag1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tag1 img {
+  width: 15px;
+  height: 14px;
+  color: greenyellow;
+}
+.tag2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tag2 img {
+  width: 15px;
+  height: 14px;
+  color: greenyellow;
+}
+.rightContainer {
+  width: 500px;
+  height: 100%;
+}
+
+.lawyerImg {
+  height: 100%;
+  margin-left: 50px;
+}
+
+@media (max-width: 769px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .leftContainer {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .imgContainer {
+    width: 247px;
+    height: 35px;
+  }
+  .description {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 15px;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .chatButton {
+    width: 90px;
+    height: 30px;
+    padding: 0 2px;
+    font-size: 12px;
+  }
+  .chatButton:focus {
+    font-size: 12px;
+  }
+  .kakaoImg {
+    width: 24px;
+  }
+  .telButton {
+    width: 90px;
+    height: 30px;
+    padding: 0 2px;
+    font-size: 12px;
+  }
+  .telButton:focus {
+    font-size: 12px;
+  }
+  .telImg {
+    width: 16px;
+  }
+  .rightContainer {
+    width: 100%;
+    margin-left: 60px;
+    position: relative;
+  }
+  .lawyerImg {
+    width: 240px;
+    z-index: 10;
+  }
+}

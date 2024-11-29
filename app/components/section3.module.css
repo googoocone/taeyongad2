@@ -1,0 +1,187 @@
+.container {
+  width: 100%;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.top {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.point {
+  width: 3px;
+  height: 75px;
+  background-color: #172959;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.span {
+  font-size: 42px;
+  color: #172959;
+  font-weight: 900;
+}
+
+.bottom {
+  width: 900px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.leftContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.consultText {
+  width: 420px;
+  margin-left: 50px;
+}
+.mobileRightContainer {
+  display: none;
+}
+
+.rightContainer {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+}
+
+.rightTextContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.manageText {
+  width: 500px;
+  margin-right: 50px;
+}
+
+.button {
+  width: 150px;
+  height: 45px;
+  background-color: #172959;
+  margin-top: 50px;
+  border-radius: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.button:hover {
+  transition: 0.5s;
+  font-size: 19px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 769px) {
+  .container {
+    width: 100%;
+    padding: 0 0 40px 0;
+  }
+  .top {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .point {
+    width: 3px;
+    height: 45px;
+    background-color: #172959;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .span {
+    font-size: 28px;
+    color: #172959;
+    font-weight: 900;
+  }
+  .bottom {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px;
+  }
+  .leftContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .imgContainer {
+    width: 100%;
+  }
+
+  .textContainer {
+    width: 100%;
+  }
+
+  .consultText {
+    width: 90%;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .rightContainer {
+    display: none;
+  }
+
+  .mobileRightContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 40px;
+  }
+  .rightTextContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .manageText {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  .button {
+    width: 150px;
+    height: 45px;
+    background-color: #172959;
+    margin-top: 30px;
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .button:hover {
+    transition: 0.5s;
+    font-size: 19px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+}
