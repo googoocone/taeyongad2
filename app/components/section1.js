@@ -1,9 +1,10 @@
-import apartLogo from "../assets/apartLogo.svg";
+import apartLogo from "../assets/apartLogo.png";
 import styles from "./section1.module.css";
 import kakao from "../assets/kakao.svg";
 import tel from "../assets/tel.svg";
 import check from "../assets/check.svg";
 import lawyer from "../assets/lawyer.svg";
+import Link from "next/link";
 
 export default function Section1() {
   return (
@@ -22,11 +23,11 @@ export default function Section1() {
         <div className={styles.buttonContainer}>
           <button className={styles.chatButton}>
             <img src={kakao.src} className={styles.kakaoImg}></img>
-            채팅상담
+            <Link href="http://pf.kakao.com/_gxiDhn/chat">채팅상담</Link>
           </button>
           <button className={styles.telButton}>
             <img src={tel.src} className={styles.telImg}></img>
-            전화상담
+            <Link href="tel:070-4138-0508">전화상담</Link>
           </button>
         </div>
         <div className={styles.tagContainer}>

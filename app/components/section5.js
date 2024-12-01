@@ -11,6 +11,7 @@ import data2 from "../assets/data2.png";
 import data3 from "../assets/data3.png";
 import data4 from "../assets/data4.png";
 import arrow from "../assets/arrow.png";
+import Link from "next/link";
 
 export default function Section5() {
   return (
@@ -37,38 +38,48 @@ export default function Section5() {
         </div>
         <div className={styles.dataContainer}>
           <div className={styles.data1}>
-            <div>
-              <img src={data1.src}></img>
-            </div>
-            <div className={styles.dataDescription}>정말 자세하고 꼼꼼한</div>
-            <div className={styles.dataTitle}>성공사례</div>
-            <div className={styles.dataTag}>바로가기</div>
+            <Link href="https://blog.naver.com/PostList.naver?blogId=taeyong-lawyer&from=postList&categoryNo=7">
+              <div>
+                <img src={data1.src}></img>
+              </div>
+              <div className={styles.dataDescription}>정말 자세하고 꼼꼼한</div>
+              <div className={styles.dataTitle}>성공사례</div>
+              <div className={styles.dataTag}>바로가기</div>
+            </Link>
           </div>
           <div className={styles.data2}>
-            <div>
-              <img src={data2.src}></img>
-            </div>
-            <div className={styles.dataDescription}>풍부한 노하우와 전문성</div>
-            <div className={styles.dataTitle}>개인회생</div>
-            <div className={styles.dataTag}>바로가기</div>
+            <Link href="https://blog.naver.com/PostList.naver?blogId=taeyong-lawyer&from=postList&categoryNo=1">
+              <div>
+                <img src={data2.src}></img>
+              </div>
+              <div className={styles.dataDescription}>
+                풍부한 노하우와 전문성
+              </div>
+              <div className={styles.dataTitle}>개인회생</div>
+              <div className={styles.dataTag}>바로가기</div>
+            </Link>
           </div>
           <div className={styles.data3}>
-            <div>
-              <img src={data3.src}></img>
-            </div>
-            <div className={styles.dataDescription}>확실한 파산면책결정</div>
-            <div className={styles.dataTitle}>개인파산</div>
-            <div className={styles.dataTag}>바로가기</div>
+            <Link href="https://blog.naver.com/PostList.naver?blogId=taeyong-lawyer&from=postList&categoryNo=1">
+              <div>
+                <img src={data3.src}></img>
+              </div>
+              <div className={styles.dataDescription}>확실한 파산면책결정</div>
+              <div className={styles.dataTitle}>개인파산</div>
+              <div className={styles.dataTag}>바로가기</div>
+            </Link>
           </div>
           <div className={styles.data4}>
-            <div>
-              <img src={data4.src}></img>
-            </div>
-            <div className={styles.dataDescription}>
-              누구보다 자신있는 전문성
-            </div>
-            <div className={styles.dataTitle}>유튜브</div>
-            <div className={styles.dataTag}>바로가기</div>
+            <Link href="https://www.youtube.com/@%ED%9A%8C%EC%83%9D%EB%A9%94%EC%9D%B4%ED%8A%B8">
+              <div>
+                <img src={data4.src}></img>
+              </div>
+              <div className={styles.dataDescription}>
+                누구보다 자신있는 전문성
+              </div>
+              <div className={styles.dataTitle}>유튜브</div>
+              <div className={styles.dataTag}>바로가기</div>
+            </Link>
           </div>
         </div>
       </div>

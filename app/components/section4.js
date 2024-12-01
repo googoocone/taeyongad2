@@ -1,7 +1,7 @@
 import styles from "./section4.module.css";
 
 import price from "../assets/price.svg";
-
+import Link from "next/link";
 export default function Section4() {
   return (
     <div className={styles.container}>
@@ -18,8 +18,15 @@ export default function Section4() {
         <img src={price.src}></img>
       </div>
       <div className={styles.footer}>
-        <button className={styles.button}>상담 하기</button>
-        <button className={styles.button}>전화 상담</button>
+        <button className={styles.button}>
+          {" "}
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3lG2n0bb2k6DmK4sXD3NARJ-eufGeOeppfiGw7OoRg7khIQ/viewform">
+            상담신청
+          </Link>
+        </button>
+        <button className={styles.button}>
+          <Link href="tel:070-4138-0508">전화상담</Link>
+        </button>
       </div>
     </div>
   );

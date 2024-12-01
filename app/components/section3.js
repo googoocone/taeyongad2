@@ -5,6 +5,7 @@ import manage from "../assets/manage.png";
 
 import consultText from "../assets/consultText.svg";
 import manageText from "../assets/manageText.svg";
+import Link from "next/link";
 
 export default function Section3() {
   return (
@@ -44,7 +45,11 @@ export default function Section3() {
             <div className={styles.textContainer}>
               <img src={manageText.src} className={styles.manageText}></img>
             </div>
-            <button className={styles.button}>상담신청</button>
+            <button className={styles.button}>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3lG2n0bb2k6DmK4sXD3NARJ-eufGeOeppfiGw7OoRg7khIQ/viewform">
+                상담신청
+              </Link>
+            </button>
           </div>
         </div>
       </div>

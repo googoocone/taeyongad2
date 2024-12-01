@@ -1,10 +1,8 @@
 "use client";
 import Image from "next/image";
 
-import { useEffect } from "react";
-import ChannelTalk from "./components/channelTalk";
 import * as ChannelService from "@channel.io/channel-web-sdk-loader";
-
+import Link from "next/link";
 ChannelService.loadScript();
 
 import Section1 from "./components/section1";
@@ -14,7 +12,41 @@ import Section4 from "./components/section4";
 import Section5 from "./components/section5";
 import Section6 from "./components/section6";
 
+import { useState } from "react";
+import { sendEmail } from "@/lib/action";
+
 export default function Home() {
+  const [formData, setFormData] = useState({
+    name: "",
+    number: "",
+  });
+
+  // 인풋 값 변경 시 상태 업데이트
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // 폼 제출 핸들러
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // 전화번호가 11자리가 아닐 경우 경고 메시지
+    if (formData.number.length !== 11) {
+      alert("전화번호는 11자리여야 합니다.");
+      return;
+    }
+    const gtag_report_conversion = () => {
+      if (typeof window !== "undefined" && typeof gtag === "function") {
+        gtag("event", "conversion", {
+          send_to: "AW-16722031338/cGQFCIa3quYZEOrl16U-",
+        });
+      }
+    };
+  };
+
   ChannelService.boot({
     pluginKey: "fa51cdd3-be1a-4b4b-a3f0-fa259994e5ac", // fill your plugin key
   });
@@ -27,7 +59,7 @@ export default function Home() {
           </h2>
           <form
             className="flex items-center justify-center gap-2"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault(); // 폼 제출 시 새로고침 방지
               const name = e.target.name.value.trim();
               const phone = e.target.phone.value.trim();
@@ -41,8 +73,15 @@ export default function Home() {
                 alert("올바른 전화번호를 입력하세요 (10~11자리 숫자).");
                 return;
               }
-
-              alert("상담 신청이 완료되었습니다!");
+              try {
+                // 폼 데이터를 서버에 전송
+                alert("상담 신청이 접수되었습니다. 곧 연락드리겠습니다");
+                const result = await sendEmail(new FormData(e.target));
+                gtag_report_conversion();
+              } catch (error) {
+                alert("이메일 전송에 실패했습니다. 다시 시도해주세요.");
+                console.error(error);
+              }
             }}
           >
             {/* 이름 입력 */}
@@ -52,7 +91,7 @@ export default function Home() {
               id="name"
               name="name"
               placeholder="이름"
-              className="border border-gray-300 rounded-md p-2 w-1/7"
+              className="border border-gray-300 rounded-md p-2 w-1/7 text-black"
             />
 
             {/* 전화번호 입력 */}
@@ -61,13 +100,13 @@ export default function Home() {
               id="phone"
               name="phone"
               placeholder="전화번호"
-              className="border border-gray-300 rounded-md p-2 w-1/6"
+              className="border border-gray-300 rounded-md p-2 w-1/6 text-black"
             />
 
             {/* 제출 버튼 */}
             <button
               type="submit"
-              className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition w-[150px]"
+              className="bg-[#172959] text-white py-2 px-4 rounded-md hover:bg-blue-600 transition w-[150px]"
             >
               즉시 상담신청
             </button>
@@ -108,6 +147,59 @@ export default function Home() {
         </footer>
       </main>
       <div className="mobile-main">
+        <div className="consult-box z-20 bg-black px-2 rounded-lg  fixed w-full text-white bottom-0">
+          <h2 className="text-md font-bold mb-4 text-center h-[20px] pt-2 pb-1">
+            상담 전화 : <Link href="tel:070-4138-0508"> 070-4138-0508</Link>{" "}
+          </h2>
+          <form
+            className="flex items-center flex-col justify-center gap-2 pb-2"
+            onSubmit={(e) => {
+              e.preventDefault(); // 폼 제출 시 새로고침 방지
+              const name = e.target.name.value.trim();
+              const phone = e.target.phone.value.trim();
+
+              if (name.length < 2) {
+                alert("이름은 최소 2글자 이상이어야 합니다.");
+                return;
+              }
+
+              if (!/^\d{10,11}$/.test(phone)) {
+                alert("올바른 전화번호를 입력하세요 (10~11자리 숫자).");
+                return;
+              }
+
+              alert("상담 신청이 완료되었습니다!");
+            }}
+          >
+            {/* 이름 입력 */}
+            <div className="flex gap-2">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="이름"
+                className="border border-gray-300 rounded-md p-2 w-1/3"
+              />
+
+              {/* 전화번호 입력 */}
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="전화번호"
+                className="border border-gray-300 rounded-md p-2 w-2/3"
+              />
+
+              {/* 제출 버튼 */}
+            </div>
+            <button
+              type="submit"
+              className="bg-[#172959] text-white py-2 px-4 rounded-md hover:bg-blue-600 transition w-full"
+            >
+              즉시 상담신청
+            </button>
+          </form>
+        </div>
         <div className="top-nav">전문변호사와 개인회생ㆍ개인파산 상담</div>
         <div className="main-container">
           <Section1></Section1>

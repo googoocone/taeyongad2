@@ -177,6 +177,7 @@
     font-size: 18px;
     font-weight: 500;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    margin-left: 10px;
   }
 
   .button:hover {
