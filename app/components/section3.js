@@ -31,7 +31,12 @@ export default function Section3() {
             <div className={styles.textContainer}>
               <img src={manageText.src} className={styles.manageText}></img>
             </div>
-            <button className={styles.button}>상담신청</button>
+            <button className={styles.button}>
+              {" "}
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3lG2n0bb2k6DmK4sXD3NARJ-eufGeOeppfiGw7OoRg7khIQ/viewform">
+                상담신청
+              </Link>
+            </button>
           </div>
           <div className={styles.imgContainer}>
             <img src={manage.src}></img>
