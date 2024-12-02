@@ -4,6 +4,7 @@ import Image from "next/image";
 import * as ChannelService from "@channel.io/channel-web-sdk-loader";
 import Link from "next/link";
 ChannelService.loadScript();
+import Script from "next/script";
 
 import Section1 from "./components/section1";
 import Section2 from "./components/section2";
@@ -52,6 +53,18 @@ export default function Home() {
   });
   return (
     <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16722031338"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16722031338');
+        `}
+      </Script>
       <main className="main">
         <div className="consult-box z-20 bg-black p-4 rounded-lg shadow-md fixed w-full text-white bottom-0">
           <h2 className="text-md font-bold mb-4 text-center">

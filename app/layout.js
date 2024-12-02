@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Noto_Sans_KR } from "next/font/google";
 import * as ChannelService from "@channel.io/channel-web-sdk-loader";
+import Script from "next/script";
 
 ChannelService.loadScript();
 
