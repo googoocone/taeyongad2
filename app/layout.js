@@ -19,13 +19,18 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* <script>
-        (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
-
-        ChannelIO('boot', {
-          "pluginKey": "fa51cdd3-be1a-4b4b-a3f0-fa259994e5ac"
-        });
-      </script> */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16722031338"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16722031338');
+          `}
+        </Script>
       </head>
       <body className={noto_sans_kr.className}>{children}</body>
     </html>
