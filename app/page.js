@@ -124,6 +124,15 @@ export default function Home() {
             >
               즉시 상담신청
             </button>
+            <div>
+              <input
+                type="checkbox"
+                id="agree"
+                name="agree"
+                className="border border-gray-300 rounded-md p-2 mr-2 w-[18px]"
+              ></input>
+              개인정보 수집 동의
+            </div>
           </form>
         </div>
 
@@ -165,6 +174,7 @@ export default function Home() {
           <h2 className="text-md font-bold mb-4 text-center h-[20px] pt-2 pb-1">
             상담 전화 : <Link href="tel:070-4138-0508"> 070-4138-0508</Link>{" "}
           </h2>
+
           <form
             className="flex items-center flex-col justify-center gap-2 pb-2"
             onSubmit={(e) => {
@@ -194,7 +204,6 @@ export default function Home() {
                 placeholder="이름"
                 className="border border-gray-300 rounded-md p-2 w-1/3"
               />
-
               {/* 전화번호 입력 */}
               <input
                 type="tel"
@@ -212,6 +221,15 @@ export default function Home() {
             >
               즉시 상담신청
             </button>
+            <div>
+              <input
+                type="checkbox"
+                id="agree"
+                name="agree"
+                className="border border-gray-300 rounded-md p-2 mr-2 w-[18px]"
+              ></input>
+              개인정보 수집 동의
+            </div>
           </form>
         </div>
         <div className="top-nav">전문변호사와 개인회생ㆍ개인파산 상담</div>
