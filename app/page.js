@@ -38,13 +38,13 @@ export default function Home() {
       alert("전화번호는 11자리여야 합니다.");
       return;
     }
-    const gtag_report_conversion = () => {
-      if (typeof window !== "undefined" && typeof gtag === "function") {
-        gtag("event", "conversion", {
-          send_to: "AW-16722031338/cGQFCIa3quYZEOrl16U-",
-        });
-      }
-    };
+  };
+  const gtag_report_conversion = () => {
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "conversion", {
+        send_to: "AW-16722031338/cGQFCIa3quYZEOrl16U-",
+      });
+    }
   };
 
   ChannelService.boot({
@@ -76,6 +76,7 @@ export default function Home() {
               try {
                 // 폼 데이터를 서버에 전송
                 alert("상담 신청이 접수되었습니다. 곧 연락드리겠습니다");
+
                 const result = await sendEmail(new FormData(e.target));
                 gtag_report_conversion();
               } catch (error) {
