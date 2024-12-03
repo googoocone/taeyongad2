@@ -202,7 +202,7 @@ export default function Home() {
                 id="name"
                 name="name"
                 placeholder="이름"
-                className="border border-gray-300 rounded-md p-2 w-1/3"
+                className="border border-gray-300 rounded-md p-2 w-1/3 text-black"
               />
               {/* 전화번호 입력 */}
               <input
@@ -210,7 +210,7 @@ export default function Home() {
                 id="phone"
                 name="phone"
                 placeholder="전화번호"
-                className="border border-gray-300 rounded-md p-2 w-2/3"
+                className="border border-gray-300 rounded-md p-2 w-2/3 text-black"
               />
 
               {/* 제출 버튼 */}
