@@ -177,7 +177,7 @@ export default function Home() {
 
           <form
             className="flex items-center flex-col justify-center gap-2 pb-2"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault(); // 폼 제출 시 새로고침 방지
               const name = e.target.name.value.trim();
               const phone = e.target.phone.value.trim();
@@ -190,6 +190,16 @@ export default function Home() {
               if (!/^\d{10,11}$/.test(phone)) {
                 alert("올바른 전화번호를 입력하세요 (10~11자리 숫자).");
                 return;
+              }
+              try {
+                // 폼 데이터를 서버에 전송
+                alert("상담 신청이 접수되었습니다. 곧 연락드리겠습니다");
+
+                const result = await sendEmail(new FormData(e.target));
+                gtag_report_conversion();
+              } catch (error) {
+                alert("이메일 전송에 실패했습니다. 다시 시도해주세요.");
+                console.error(error);
               }
 
               alert("상담 신청이 완료되었습니다!");
