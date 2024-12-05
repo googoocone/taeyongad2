@@ -12,34 +12,11 @@ import Section3 from "./components/section3";
 import Section4 from "./components/section4";
 import Section5 from "./components/section5";
 import Section6 from "./components/section6";
+import Short from "./components/short";
 
-import { useState } from "react";
 import { sendEmail } from "@/lib/action";
 
 export default function Home() {
-  const [formData, setFormData] = useState({
-    name: "",
-    number: "",
-  });
-
-  // 인풋 값 변경 시 상태 업데이트
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  // 폼 제출 핸들러
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // 전화번호가 11자리가 아닐 경우 경고 메시지
-    if (formData.number.length !== 11) {
-      alert("전화번호는 11자리여야 합니다.");
-      return;
-    }
-  };
   const gtag_report_conversion = () => {
     if (typeof window !== "undefined" && typeof gtag === "function") {
       gtag("event", "conversion", {
@@ -85,9 +62,9 @@ export default function Home() {
 
       <main className="main">
         <div className="consult-box z-20 bg-black p-4 rounded-lg shadow-md fixed w-full text-white bottom-0">
-          <h2 className="text-md font-bold mb-4 text-center">
+          {/* <h2 className="text-md font-bold mb-4 text-center">
             딱 한번의 상담으로 채무를 해결해보세요. 상담 전화 : 070-4138-0508
-          </h2>
+          </h2> */}
           <form
             className="flex items-center justify-center gap-2"
             onSubmit={async (e) => {
@@ -157,6 +134,9 @@ export default function Home() {
         <div className="top-nav">
           전문변호사와 확실한 개인회생ㆍ개인파산 상담, 지금 바로 받아보세요
         </div>
+
+        <Short></Short>
+
         <div className="main-container">
           <Section1></Section1>
         </div>
@@ -188,11 +168,7 @@ export default function Home() {
         </footer>
       </main>
       <div className="mobile-main">
-        <div className="consult-box z-20 bg-black px-2 rounded-lg  fixed w-full text-white bottom-0">
-          <h2 className="text-md font-bold mb-4 text-center h-[20px] pt-2 pb-1">
-            상담 전화 : <Link href="tel:070-4138-0508"> 070-4138-0508</Link>{" "}
-          </h2>
-
+        <div className="consult-box z-20 bg-black px-2 py-2 rounded-lg  fixed w-full text-white bottom-0">
           <form
             className="flex items-center flex-col justify-center gap-2 pb-2"
             onSubmit={async (e) => {
@@ -249,7 +225,7 @@ export default function Home() {
             >
               즉시 상담신청
             </button>
-            <div>
+            {/* <div>
               <input
                 type="checkbox"
                 id="agree"
@@ -257,10 +233,11 @@ export default function Home() {
                 className="border border-gray-300 rounded-md p-2 mr-2 w-[18px]"
               ></input>
               개인정보 수집 동의
-            </div>
+            </div> */}
           </form>
         </div>
         <div className="top-nav">전문변호사와 개인회생ㆍ개인파산 상담</div>
+        <Short></Short>
         <div className="main-container">
           <Section1></Section1>
         </div>
