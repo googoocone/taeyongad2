@@ -30,36 +30,6 @@ export default function Home() {
   });
   return (
     <>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-16722031338"
-        strategy="afterInteractive"
-      />
-      <Script id="google-ads" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-16722031338');
-        `}
-      </Script>
-      <Script>
-        {`
-        
-        function gtag_report_conversion(url) {
-          var callback = function () {
-            if (typeof(url) != 'undefined') {
-              window.location = url;
-            }
-          };
-          gtag('event', 'conversion', {
-              'send_to': 'AW-16722031338/EsAHCKH92_IZEOrl16U-',
-              'event_callback': callback
-          });
-          return false;
-        }
-        `}
-      </Script>
-
       <main className="main">
         <div className="consult-box z-20 bg-black p-4 rounded-lg shadow-md fixed w-full text-white bottom-0">
           {/* <h2 className="text-md font-bold mb-4 text-center">
