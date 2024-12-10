@@ -19,21 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16722031338"
-          strategy="afterInteractive"
-          id="inline-script-1"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16722031338');
-          `}
-        </Script>
-      </head>
+      <head></head>
       <body className={noto_sans_kr.className}>{children}</body>
     </html>
   );
