@@ -4,7 +4,8 @@ import Image from "next/image";
 import * as ChannelService from "@channel.io/channel-web-sdk-loader";
 import Link from "next/link";
 ChannelService.loadScript();
-import Script from "next/script";
+import { useEffect } from "react";
+import TrackingPage from "./trackerReact";
 
 import Section1 from "./components/section1";
 import Section2 from "./components/section2";
@@ -14,22 +15,13 @@ import Section5 from "./components/section5";
 import Section6 from "./components/section6";
 import Short from "./components/short";
 
-import { sendEmail } from "@/lib/action";
-
 export default function Home() {
-  const gtag_report_conversion = () => {
-    if (typeof window !== "undefined" && typeof gtag === "function") {
-      gtag("event", "conversion", {
-        send_to: "AW-16722031338/cGQFCIa3quYZEOrl16U-",
-      });
-    }
-  };
-
   ChannelService.boot({
     pluginKey: "fa51cdd3-be1a-4b4b-a3f0-fa259994e5ac", // fill your plugin key
   });
   return (
     <>
+      <TrackingPage></TrackingPage>
       <main className="main">
         <button className="z-10 w-[80px] h-[80px] cursor-pointer text-white bg-[#172959] fixed right-16 bottom-1/3 flex items-center justify-center rounded-full shadow-lg hover:scale-110 animate-bounce">
           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3lG2n0bb2k6DmK4sXD3NARJ-eufGeOeppfiGw7OoRg7khIQ/viewform">
