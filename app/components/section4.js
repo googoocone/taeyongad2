@@ -1,6 +1,7 @@
 import styles from "./section4.module.css";
 
-import price from "../assets/price.svg";
+import price3 from "../assets/price3.svg";
+
 import Link from "next/link";
 export default function Section4() {
   return (
@@ -15,7 +16,7 @@ export default function Section4() {
         </div>
       </div>
       <div className={styles.bottom}>
-        <img src={price.src}></img>
+        <img src={price3.src}></img>
       </div>
       <div className={styles.footer}>
         <button className={styles.button}>
