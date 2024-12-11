@@ -31,6 +31,12 @@ export default function Home() {
   return (
     <>
       <main className="main">
+        <button className="z-10 w-[80px] h-[80px] cursor-pointer text-white bg-[#172959] fixed right-16 bottom-1/3 flex items-center justify-center rounded-full shadow-lg hover:scale-110 animate-bounce">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3lG2n0bb2k6DmK4sXD3NARJ-eufGeOeppfiGw7OoRg7khIQ/viewform">
+            상담신청
+          </Link>
+        </button>
+
         <div className="top-nav">
           전문변호사와 확실한 개인회생ㆍ개인파산 상담, 지금 바로 받아보세요
         </div>
@@ -69,6 +75,11 @@ export default function Home() {
       </main>
       <div className="mobile-main">
         <div className="top-nav">전문변호사와 개인회생ㆍ개인파산 상담</div>
+        <button className="z-10 w-[65px] h-[65px] text-sm cursor-pointer text-white bg-[#172959] fixed right-2 bottom-1/4 flex items-center justify-center rounded-full shadow-lg hover:scale-110 animate-bounce">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3lG2n0bb2k6DmK4sXD3NARJ-eufGeOeppfiGw7OoRg7khIQ/viewform">
+            상담신청
+          </Link>
+        </button>
         <Short></Short>
         <div className="main-container">
           <Section1></Section1>
