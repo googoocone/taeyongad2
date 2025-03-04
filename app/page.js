@@ -61,9 +61,9 @@ export default function Home() {
         <div className="section3-container">
           <Section3></Section3>
         </div>
-        <div className="section2-container">
+        {/* <div className="section2-container">
           <Section4></Section4>
-        </div>
+        </div> */}
         <div className="section3-container">
           <Section5></Section5>
         </div>
