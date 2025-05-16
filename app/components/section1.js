@@ -27,7 +27,7 @@ export default function Section1() {
           </button>
           <button className={styles.telButton}>
             <img src={tel.src} className={styles.telImg}></img>
-            <Link href="tel:070-4138-0508">전화상담</Link>
+            <Link href="tel:070-4138-0508">070-4138-0508</Link>
           </button>
         </div>
         <div className={styles.tagContainer}>

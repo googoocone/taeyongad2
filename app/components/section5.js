@@ -70,7 +70,7 @@ export default function Section5() {
             </Link>
           </div>
           <div className={styles.data4}>
-            <Link href="https://www.youtube.com/@%ED%9A%8C%EC%83%9D%EB%A9%94%EC%9D%B4%ED%8A%B8">
+            <Link href="https://www.youtube.com/@%EA%B0%9C%EC%9D%B8%ED%9A%8C%EC%83%9D%EB%A9%94%EC%9D%B4%ED%8A%B8">
               <div>
                 <img src={data4.src}></img>
               </div>

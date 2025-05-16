@@ -64,7 +64,7 @@
 }
 
 .telButton {
-  width: 130px;
+  width: 170px;
   height: 40px;
   background-color: #fafafa;
   border-radius: 50px;
@@ -75,11 +75,12 @@
   margin-left: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   font-size: 18px;
+  font-weight: bold;
 }
 
 .telImg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   margin-right: 5px;
 }
 
@@ -160,10 +161,11 @@
     width: 24px;
   }
   .telButton {
-    width: 90px;
+    width: 130px;
     height: 30px;
     padding: 0 2px;
     font-size: 12px;
+    font-weight: bolder;
   }
   .telButton:focus {
     font-size: 12px;

@@ -5,44 +5,31 @@ import * as ChannelService from "@channel.io/channel-web-sdk-loader";
 import Link from "next/link";
 ChannelService.loadScript();
 import { useEffect, useState } from "react";
-import TrackingPage from "./trackerReact";
 
 import Section1 from "./components/section1";
 import Section2 from "./components/section2";
 import Section3 from "./components/section3";
-import Section4 from "./components/section4";
+import Success from "./components/success";
 import Section5 from "./components/section5";
 import Section6 from "./components/section6";
 import Short from "./components/short";
-import Modal from "./components/Modal";
-
-import event2 from "./assets/event2.png";
 
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
 
-  useEffect(() => {
-    // 홈페이지가 로드되었을 때 팝업을 띄운다.
-    setModalOpen(true);
-  }, []);
+  // useEffect(() => {
+  //   // 홈페이지가 로드되었을 때 팝업을 띄운다.
+  //   setModalOpen(true);
+  // }, []);
 
   ChannelService.boot({
     pluginKey: "fa51cdd3-be1a-4b4b-a3f0-fa259994e5ac", // fill your plugin key
   });
   return (
     <>
-      <TrackingPage></TrackingPage>
+      {/* <TrackingPage></TrackingPage> */}
 
       <main className="main">
-        <Modal
-          className="fixed w-[400px] h-[400px] top-1/4 right-14 transform -translate-x-1/2 -translate-y-1/2 z-50"
-          isOpen={isModalOpen}
-          onClose={() => setModalOpen(false)}
-        >
-          <div className="w-full h-full">
-            <img src={event2.src}></img>
-          </div>
-        </Modal>
         <button className="z-10 w-[80px] h-[80px] cursor-pointer text-white bg-red-500 fixed right-16 bottom-1/3 flex items-center justify-center rounded-full shadow-lg hover:scale-110 animate-bounce">
           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3lG2n0bb2k6DmK4sXD3NARJ-eufGeOeppfiGw7OoRg7khIQ/viewform">
             상담신청
@@ -53,7 +40,8 @@ export default function Home() {
         </div>
         <Short></Short>
         <div className="main-container">
-          <Section1></Section1>
+          {/* <Section1></Section1> */}
+          <Success></Success>
         </div>
         <div className="section2-container">
           <Section2></Section2>
@@ -83,7 +71,7 @@ export default function Home() {
         </footer>
       </main>
       <div className="mobile-main">
-        <Modal
+        {/* <Modal
           className="fixed w-[300px] h-[300px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50"
           isOpen={isModalOpen}
           onClose={() => setModalOpen(false)}
@@ -91,16 +79,16 @@ export default function Home() {
           <div className="w-full h-full">
             <img src={event2.src}></img>
           </div>
-        </Modal>
+        </Modal> */}
         <div className="top-nav">전문변호사와 개인회생ㆍ개인파산 상담</div>
-        <button className="z-10 w-[65px] h-[65px] text-sm cursor-pointer text-white bg-[#172959] fixed right-2 bottom-1/4 flex items-center justify-center rounded-full shadow-lg hover:scale-110 animate-bounce">
+        {/* <button className="z-10 w-[65px] h-[65px] text-sm cursor-pointer text-white bg-[#172959] fixed right-2 bottom-1/4 flex items-center justify-center rounded-full shadow-lg hover:scale-110 animate-bounce">
           <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3lG2n0bb2k6DmK4sXD3NARJ-eufGeOeppfiGw7OoRg7khIQ/viewform">
             상담신청
           </Link>
-        </button>
+        </button> */}
         <Short></Short>
         <div className="main-container">
-          <Section1></Section1>
+          <Success></Success>
         </div>
         <div className="section2-container">
           <Section2></Section2>
