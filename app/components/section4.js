@@ -18,17 +18,6 @@ export default function Section4() {
       <div className={styles.bottom}>
         <img src={price3.src}></img>
       </div>
-      <div className={styles.footer}>
-        <button className={styles.button}>
-          {" "}
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3lG2n0bb2k6DmK4sXD3NARJ-eufGeOeppfiGw7OoRg7khIQ/viewform">
-            상담신청
-          </Link>
-        </button>
-        <button className={styles.button}>
-          <Link href="tel:070-4138-0508">전화상담</Link>
-        </button>
-      </div>
     </div>
   );
 }

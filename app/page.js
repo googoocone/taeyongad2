@@ -14,6 +14,7 @@ import Section5 from "./components/section5";
 import Section6 from "./components/section6";
 import Short from "./components/short";
 import Kakao from "./components/kako";
+import Why from "./components/why";
 
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -73,6 +74,7 @@ export default function Home() {
         <div className="top-nav">전문변호사와 개인회생ㆍ개인파산 상담</div>
 
         <Short></Short>
+        <Why></Why>
         <div className="main-container">
           <Success></Success>
         </div>
