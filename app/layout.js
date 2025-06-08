@@ -2,6 +2,7 @@ import "./globals.css";
 import { Noto_Sans_KR } from "next/font/google";
 import * as ChannelService from "@channel.io/channel-web-sdk-loader";
 import Script from "next/script";
+import Footer from "./components/Footer";
 
 ChannelService.loadScript();
 
@@ -20,7 +21,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head></head>
-      <body className={noto_sans_kr.className}>{children}</body>
+      <body className={noto_sans_kr.className}>
+        {children}
+        <Footer></Footer>
+      </body>
     </html>
   );
 }

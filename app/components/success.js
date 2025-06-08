@@ -71,9 +71,11 @@ const SuccessSlider = () => {
       <div className={styles.top}>
         <div className={styles.point}></div>
         <div className={styles.title}>
-          김태용 변호사의 <span className={styles.span}>회생 성공사례</span>
+          오직
+          <span className={styles.span}>수원 개인회생</span>
+          사건만 처리합니다.
         </div>
-        <div className="text-gray-700 text-xs">
+        <div className="text-gray-700 text-sm">
           클릭하시면 변호사의 조력 내용을 볼 수 있습니다.
         </div>
       </div>
@@ -107,7 +109,7 @@ const SuccessSlider = () => {
         className="mySwiper w-full h-full" // 커스텀 스타일링을 위한 클래스
       >
         {successData.map((item) => (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide key={item.id} className="px-2">
             <a
               href={item.url}
               target="_blank"

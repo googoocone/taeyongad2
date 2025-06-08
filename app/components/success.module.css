@@ -47,11 +47,13 @@
   .title {
     font-size: 18px;
     font-weight: 500;
+
   }
   .span {
     font-size: 28px;
     color: #172959;
     font-weight: 900;
+        padding : 0 4px 0 4px;
   }
 
   .bottom {
