@@ -13,8 +13,8 @@ export default function Section3() {
       <div className={styles.top}>
         <div className={styles.point}></div>
         <div className={styles.title}>
-          개인회생ㆍ파산 <span className={styles.span}>누구한테?</span>{" "}
-          맡길까요?
+          <span className={styles.span}>김태용 변호사와</span> <br />
+          직접 상담할 수 있습니다.
         </div>
       </div>
       <div className={styles.bottom}>

@@ -15,6 +15,7 @@ import Section6 from "./components/section6";
 import Short from "./components/short";
 import Kakao from "./components/kako";
 import Why from "./components/why";
+import Map from "./components/map";
 
 export default function Home() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -78,13 +79,14 @@ export default function Home() {
         <div className="main-container">
           <Success></Success>
         </div>
-        <div className="section2-container">
-          <Section2></Section2>
-        </div>
         <div className="section3-container">
           <Section3></Section3>
         </div>
         <Kakao></Kakao>
+        <Map></Map>
+        <div className="section2-container">
+          <Section2></Section2>
+        </div>
         <div className="section3-container">
           <Section5></Section5>
         </div>
