@@ -38,6 +38,20 @@ class ChannelService {
 
   boot(option, callback) {
     window.ChannelIO("boot", option, callback);
+
+    // --- START: 추가된 코드 ---
+    // 채널톡 메신저(채팅창)가 열릴 때마다 실행될 콜백 함수를 등록합니다.
+    // 사용자가 '남색 채널톡 버튼'을 클릭하면 메신저가 열리므로, 이 시점에 이벤트를 전송합니다.
+    window.ChannelIO("onShowMessenger", function () {
+      // gtag 함수가 사용 가능한지 확인 후, 전환 이벤트 전송
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: "AW-16722031338/32LrCKeQ2dYaEOrl16U-",
+        });
+        console.log("채널톡 버튼 클릭(onShowMessenger): 전환 이벤트 전송 완료");
+      }
+    });
+    // --- END: 추가된 코드 ---
   }
 
   shutdown() {
